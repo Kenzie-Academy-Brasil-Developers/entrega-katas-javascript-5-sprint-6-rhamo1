@@ -5,11 +5,12 @@ let b = 2
 let c = 4
 let d = 3
 
+
 /* Kata 1 - Reverse string */
 
 const testReverseString1 = () => {
-    let result = reverseString('String teste')
-    let expected = 'etset gnirtS'
+    let result = reverseString('String teste!')
+    let expected = '!etset gnirtS'
     console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
 
 }
@@ -77,6 +78,7 @@ const minimumValue = (arr) => {
 testMinimumValue1()
 testMinimumValue2()
 
+
 /* Kata 4  - MaximumValue */
 
 const testMaximumValue1 = () => {
@@ -101,6 +103,7 @@ const maximumValue = (arr) => {
 testMaximumValue1()
 testMaximumValue2()
 
+
 /* Kata 5 - CalculateRemainder */
 
 const testCalculateRemainder1 = () => {
@@ -120,6 +123,7 @@ const calculateRemainder = (x, y) => {
 }
 testCalculateRemainder1()
 testCalculateRemainder2()
+
 
 /* Kata 6 - DistinctValues */
 
@@ -145,6 +149,7 @@ const distinctValues = (arr) => {
 }
 testDistinctValues1()
 testDistinctValues2()
+
 
 /* Kata 7 - CountValues */
 
@@ -180,9 +185,9 @@ const countValues = (arr) => {
 
     return valuesCount.join(', ')
 }
-
 testCountValues1()
 testCountValues2()
+
 
 /* Kata 8  */
 
@@ -212,29 +217,26 @@ const testEvaluateExpression2 = () => {
 }
 
 const evaluateExpression = (abcd, obj) => {
-    let str = abcd;
+    let str = abcd
 
     for (let key in obj) {
         str = str.replace(key, obj[key])
-    };
+    }
 
-    let arr = str.split(' ');
-    let sum = Number(arr[0]);
+    let arr = str.split(' ')
+    let sum = Number(arr[0])
 
     for (let i = 1; i < arr.length; i++) {
-        let value = arr[i];
+        let value = arr[i]
 
         if (value === '+') {
             sum += Number(arr[i + 1])
-        };
+        }
         if (value === '-') {
             sum -= Number(arr[i + 1])
-        };
-
-    };
-
-    return sum;
+        }
+    }
+    return sum
 }
-
 testEvaluateExpression1()
 testEvaluateExpression2()
